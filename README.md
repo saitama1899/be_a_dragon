@@ -30,6 +30,7 @@ Make a new file on initalizers folder:
 ```ruby
 # initializers/motivational-cron.rb
 require 'rufus-scheduler'
+require 'be_a_dragon'
 
 scheduler = Rufus::Scheduler.new
 motivation = BeADragon::MotivateMePls
