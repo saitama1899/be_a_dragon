@@ -53,14 +53,13 @@ module BeADragon
         "Codifilus totalus!",
         "You better go for a coffe",
         "JUST DO-O IT!!",
-        "Inhale, exhale, repeat."
+        "Inhale, exhale, repeat.",
         "You should get fired for that #{name}...",
         "You must be kidding, #{name}",
         "Really, #{name}? Really?",
         "Oh come on, put my fingers in my eyes, please, #{name}",
         "#{name}, on the search of the lost semicolon"
-      ]
-      sentences.sample
+      ].sample
     end
   end
 end
