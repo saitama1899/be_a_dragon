@@ -1,34 +1,44 @@
-# BeADragon
+# Be A Dragon
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/be_a_dragon`. To experiment with that code, run `bin/console` for an interactive prompt.
+Motivational sentences to help you code in peace.
 
-TODO: Delete this and the text above, and describe your gem
+Your code does not work as it should? You have only one spec to correct and you want to sleep?
+Does Rubocop mistreat you? Need some extra motivational push to finish that f*** code? This is your gem.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this to your application's Gemfile:
 
 ```ruby
 gem 'be_a_dragon'
 ```
 
-And then execute:
+And then add some simple CRON worker gem like 
+
+```ruby
+gem 'rufus-scheduler'
+```
+
+Run:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install be_a_dragon
 
 ## Usage
 
-TODO: Write usage instructions here
+Make a new file on initalizers folder:
+```ruby
+# initializers/motivational-cron.rb
+require 'rufus-scheduler'
 
-## Development
+scheduler = Rufus::Scheduler.new
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+scheduler.cron '* * * * *' do
+  BeADragon::MotivateMePls.random_sentence(your_name)
+end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Custom cron times at https://crontab.guru/
 
 ## Contributing
 
