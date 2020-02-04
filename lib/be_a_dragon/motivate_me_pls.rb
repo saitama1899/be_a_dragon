@@ -1,7 +1,7 @@
 module BeADragon
   class MotivateMePls
     def self.random_sentence(name)
-      sentences = [
+      puts [
         "Friendly reminder: You are the best.",
         "I didn’t fail the test. I just found 100 ways to do it wrong.",
         "Help me rubocup, you are my only hope",
