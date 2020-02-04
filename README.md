@@ -32,9 +32,10 @@ Make a new file on initalizers folder:
 require 'rufus-scheduler'
 
 scheduler = Rufus::Scheduler.new
+motivation = BeADragon::MotivateMePls
 
 scheduler.cron '* * * * *' do
-  BeADragon::MotivateMePls.random_sentence(your_name)
+  motivation.random_sentence('Eric')
 end
 ```
 
